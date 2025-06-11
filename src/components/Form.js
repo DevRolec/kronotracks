@@ -2,14 +2,14 @@ import React from "react";
 
 const Form = () => {
   return (
-    <div className="flex flex-col items-center justify-center py-20 gap-9 w-full bg-gray text-white">
-      <section className="my-3 w-3/5 text-center">
+    <div className="flex flex-col items-center justify-center py-20 gap-9 w-full bg-gray text-white text-wrap">
+      <section className="my-3  text-center">
         <h1 className="text-3xl ">
           PARTNER WITH <b className=" font-thin text-5xl">kronotrack</b>{" "}
         </h1>
         <p> We will contact you promptly</p>
       </section>
-      <section className=" w-3/5 ">
+      <section className=" w-3/5 max-md:w-full max-md:px-5 ">
         <form action="https://formsubmit.co/your@email.com" method="POST">
           <input
             type="text"
