@@ -5,7 +5,7 @@ export default function HighlightsPage() {
   const [current, setCurrent] = useState(0);
   const slides = [
     {
-      image: "/highlight1.jpg",
+      image: "/",
       caption: "An Unforgettable Journey Through Turkey",
       reviewer: "Maria Angelica",
       location: "Manila, Philippines",
@@ -14,7 +14,7 @@ export default function HighlightsPage() {
         "Turkey is a place I treasure — the colors, the food, the people. This trip made me feel alive in every sense. I will definitely return! Great question. Moving from React.js to Next.js is more of an evolution than a shift, but it introduces a number of important differences you’ll need to adapt to—especially around routing, rendering, and data fetching. Below is a breakdown of what you need to know",
     },
     {
-      image: "/highlight2.jpg",
+      image: "/",
       caption: "Sunset from Bosphorus Yacht Cruise",
       reviewer: "David O.",
       location: "Lagos, Nigeria",
@@ -23,7 +23,7 @@ export default function HighlightsPage() {
         "The Bosphorus sunset cruise was magical. A perfect way to unwind and soak in the skyline. Highly recommended for Great question. Moving from React.js to Next.js is more of an evolution than a shift, but it introduces a number of important differences you’ll need to adapt to—especially around routing, rendering, and data fetching. Below is a breakdown of what you need to know:couples.",
     },
     {
-      image: "/highlight3.jpg",
+      image: "/",
       caption: "Exploring Cappadocia",
       reviewer: "Leila M.",
       location: "Dubai, UAE",

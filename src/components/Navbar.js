@@ -1,9 +1,8 @@
-'use client';
-import Link from 'next/link';
+import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <header className="flex justify-between items-center p-4 md:px-10 bg-white shadow-sm">
+    <header className="flex justify-between items-center p-4 md:px-10 bg-white shadow-sm w-full">
       <div className="text-xl font-bold">KronoTrack</div>
       <nav className="hidden md:flex gap-6 text-gray-700 font-medium">
         <Link href="/">Discover</Link>
@@ -17,8 +16,8 @@ const Navbar = () => {
         <button className="bg-black text-white px-4 py-2 rounded-full text-sm">Start</button>
       </div>
     </header>
+
   );
 };
 
 export default Navbar;
-
