@@ -12,11 +12,14 @@ const Navbar = () => {
         <Link href="/blog">Blog</Link>
       </nav>
       <div className="flex gap-4 items-center">
-        <button className="hidden md:inline text-sm text-gray-600">🔍 Search</button>
-        <button className="bg-black text-white px-4 py-2 rounded-full text-sm">Start</button>
+        <button className="hidden md:inline text-sm text-gray-600">
+          🔍 Search
+        </button>
+        <button className="bg-black text-white px-4 py-2 rounded-full text-sm">
+          Start
+        </button>
       </div>
     </header>
-
   );
 };
 

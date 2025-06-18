@@ -3,6 +3,8 @@
 :root {
   --primary: #007bff;
   --primary-bg: #daeafb;
+  --menu-bg: #d402f9;
+  --secondary: #e5e3e3;
   --success: #28a745;
   --warning: #ffc107;
   --danger: #dc3545;
@@ -13,6 +15,9 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 /* 🧩 Utility Classes (Optional) */
+.secondary {
+  background-color: var(--secondary);
+}
 .text-primary {
   color: var(--primary);
 }
@@ -37,13 +42,23 @@
 .bg-light {
   background-color: var(--light);
 }
+.menu-bg {
+  background-color: var(--menu-bg);
+}
+.text-menu-bg {
+  color: var(--menu-bg);
+}
 
 body {
-  background-color: black;
+  background-color: white;
   color: var(--light);
   font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
+}
+
+.scrollhide::-webkit-scrollbar {
+  display: none;
 }
 
 /* 
