@@ -6,13 +6,31 @@
   --success: #28a745;
   --warning: #ffc107;
   --danger: #dc3545;
+  --purple: rgb(108, 2, 108);
+  --purplelt: rgb(188, 69, 188);
   --dark: #343a40;
   --gray: #6c757d;
   --light: #f8f9fa;
   --white: #ffffff;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  --font-1: "Inter", sans-serif;
+  --font-2: "Poppins", sans-serif;
+  --font-3: "Lato", sans-serif;
+
+  --font-xs: 0.75rem; /* 12px */
+  --font-sm: 0.875rem; /* 14px */
+  --font-base: 1rem; /* 16px */
+  --font-md: 1.125rem; /* 18px */
+  --font-lg: 1.25rem; /* 20px */
+  --font-xl: 1.5rem; /* 24px */
+  --font-2xl: 1.875rem; /* 30px */
+  --font-3xl: 2.25rem; /* 36px */
+  --font-4xl: 3rem; /* 48px */
+  --font-5xl: 4rem; /* 64px */
 }
-/* 🧩 Utility Classes (Optional) */
+/* <div className="text-[var(--text-dark)] font-[var(--font-10)] text-[var(--font-xs)] rounded-[var(--radius-md)]">
+  Styled with root variables inline
+</div> */
 .text-primary {
   color: var(--primary);
 }
@@ -37,15 +55,32 @@
 .bg-light {
   background-color: var(--light);
 }
+.bg-purplelt {
+  background-color: var(--purplelt);
+}
+.bg-purple {
+  background-color: var(--purple);
+}
 
 body {
-  background-color: black;
+  background-color: var(--light);
   color: var(--light);
   font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
 }
-
+.font1 {
+  font-family: var(--font-1);
+}
+.font2 {
+  font-family: var(--font-2);
+}
+.font3 {
+  font-family: var(--font-3);
+}
 /* 
 <div class="border-2 border-[aqua] rounded-[20px] p-4">
  

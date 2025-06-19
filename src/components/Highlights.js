@@ -6,7 +6,7 @@ export default function HighlightsPage() {
   const slides = [
     {
       image: "/",
-      caption: "An Unforgettable Journey Through Turkey",
+      caption: "An Unforgettable Journey in Turkey",
       reviewer: "Maria Angelica",
       location: "Manila, Philippines",
       stars: 5,
@@ -34,8 +34,8 @@ export default function HighlightsPage() {
   ];
 
   return (
-    <div className="bg-light flex items-center justify-center flex-col h-auto sm:h-[500px] px-4 pt-4 pb-4">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--dark)] mb-4 leading-tight text-center">
+    <div className="bg-light flex mt-4 mb-4 items-center justify-center flex-col h-auto sm:h-[500px] px-4 pt-4 pb-4">
+      <h2 className="text-4xl font-bold text-[var(--purplelt)] mb-6 leading-tight">
         Trekker’s Highlights
       </h2>
 
@@ -57,21 +57,21 @@ export default function HighlightsPage() {
             {"★".repeat(slides[current].stars)}
             {"☆".repeat(5 - slides[current].stars)}
           </div>
-          <h3 className="text-lg sm:text-xl font-semibold text-[var(--primary)] mb-2">
+          <h3 className="text-xl font-semibold text-[var(--purple)] mb-2">
             {slides[current].caption}
           </h3>
-          <p className="text-sm font-sans text-[var(--dark)] font-semibold max-w-[90%] text-center md:text-left">
+          <p className="text-[0.875rem] font-sans  text-justify text-[var(--dark)] font-semibold max-w-[90%]">
             {slides[current].description}
           </p>
         </div>
 
         {/* Center - Image Slider */}
         <div className="flex items-center flex-col w-[90%] sm:w-[60%] md:w-[25%] h-auto md:h-[80%]">
-          <div className="w-full h-[250px] sm:h-[300px] md:h-[90%] rounded-lg bg-[var(--primary-bg)] flex items-center justify-center text-[var(--dark)]">
+          <div className="w-full h-[250px] sm:h-[300px] md:h-[90%]S  flex items-center justify-center  border-2 border-[var(--purplelt)] rounded-[10px] p-2">
             <img
               src={slides[current].image}
               alt="Highlight"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-full object-cover "
             />
           </div>
           <div className="flex justify-center mt-2 gap-1">
@@ -79,7 +79,9 @@ export default function HighlightsPage() {
               <button
                 key={i}
                 className={`w-3 h-3 rounded-full ${
-                  i === current ? "bg-[var(--primary)]" : "bg-[var(--gray)]"
+                  i === current
+                    ? " bg-[var(--purplelt)]"
+                    : "border-1 border-[var(--purplelt)] "
                 }`}
                 onClick={() => setCurrent(i)}
               ></button>
@@ -89,86 +91,17 @@ export default function HighlightsPage() {
 
         {/* Right - Video or second image placeholder */}
         <div className="flex items-center flex-col w-[90%] sm:w-[60%] md:w-[20%] h-[80%] md:h-[80%] gap-4">
-          <div className="w-full h-[200px] sm:h-[60%] rounded-lg bg-[var(--primary-bg)] flex items-center justify-center">
+          <div className="w-full h-[200px] sm:h-[60%] flex items-center justify-center   border-2 border-[var(--purplelt)] rounded-[10px] p-2">
             <span className="text-[var(--dark)] text-3xl">▶</span>
           </div>
-          <p className="text-sm font-sans text-[var(--dark)] font-semibold text-center md:text-left max-w-[90%]">
+          <p className="text-[0.875rem] font-sans text-justify text-[var(--dark)] font-semibold max-w-[80%]">
             {slides[current].caption}
           </p>
-          <button className="px-4 py-2 border border-[var(--primary)] text-[var(--primary)] rounded hover:bg-pink-50">
+          <button className="bg-purple text-light m-3 h-auto px-6 py-2 rounded">
             See more highlights
           </button>
         </div>
       </div>
     </div>
-
-    // <div className="bg-light mb-4 h-[500px] mt-4 flex items-center justify-center flex-col">
-    //   <h2 className="text-3xl sm:text-4xl font-bold text-[var(--dark)] mb-4 leading-tight text-center md:text-left">
-    //     Trekker’s Highlights
-    //   </h2>
-
-    //   <div className="flex flex-col items-center justify-cente md:flex-row gap-6 h-[80%] w-[98%]">
-    //     {/* Left Column - Text Review */}
-    //     <div className="flex items-center justify-center flex-col w-[50%] h-[90%]">
-    //       <div className="flex items-center mb-2">
-    //         <div className="w-10 h-10 rounded-full bg-gray-300 mr-3"></div>
-    //         <div>
-    //           <p className="font-semibold text-gray-700">
-    //             {slides[current].reviewer}
-    //           </p>
-    //           <p className="text-sm text-gray-500">
-    //             {slides[current].location}
-    //           </p>
-    //         </div>
-    //       </div>
-    //       <div className="flex text-yellow-400 mb-2">
-    //         {"★".repeat(slides[current].stars)}
-    //         {"☆".repeat(5 - slides[current].stars)}
-    //       </div>
-    //       <h3 className="text-xl font-semibold text-[var(--primary)] mb-2">
-    //         {slides[current].caption}
-    //       </h3>
-    //       <p className="text-[0.9em] font-sans text-[var(--dark)] font-semibold max-w-[80%]">
-    //         {slides[current].description}
-    //       </p>
-    //     </div>
-
-    //     {/* Center - Image Slider */}
-    //     <div className="flex items-center  flex-col w-[25%] h-[80%]">
-    //       <div className="w-full h-[90%] rounded-lg bg-[var(--primary-bg)] flex items-center justify-center  text-[var(--dark)] ">
-    //         <img
-    //           src={slides[current].image}
-    //           alt="Highlight"
-    //           className="w-full h-full object-cover rounded-lg"
-    //         />
-    //       </div>
-    //       <div className="flex justify-center mt-2 gap-1">
-    //         {slides.map((_, i) => (
-    //           <button
-    //             key={i}
-    //             className={`w-3 h-3 rounded-full ${
-    //               i === current ? "bg-[var(--primary)]" : "bg-[var(--gray)]"
-    //             }`}
-    //             onClick={() => setCurrent(i)}
-    //           ></button>
-    //         ))}
-    //       </div>
-    //     </div>
-
-    //     {/* Right - Video or second image placeholder */}
-    //     <div className="flex items-center  flex-col w-[20%]  h-[80%] gap-4">
-    //       <div className="w-full h-[60%] rounded-lg bg-[var(--primary-bg)] flex items-center justify-center">
-    //         <span className=" text-[var(--dark)] text-3xl">▶</span>
-    //       </div>
-    //       <p className="text-[0.9em] font-sans text-[var(--dark)] font-semibold max-w-[80%]">
-    //         {slides[current].caption}
-    //       </p>
-
-    //       <button className="px-4 py-2 border border-[var(--primary)] text-[var(--primary)] rounded hover:bg-pink-50">
-    //         See more highlights
-    //       </button>
-    //     </div>
-    //   </div>
-    // </div>
   );
 }

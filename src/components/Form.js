@@ -2,29 +2,30 @@ import React from "react";
 
 const Form = () => {
   return (
-    <div className="flex flex-col items-center justify-center py-20 gap-9 w-full bg-gray text-white text-wrap">
+    <div className="flex flex-col items-center justify-center py-20 gap-9 w-full bg-[var(--purplelt)] text-white text-wrap">
       <section className="my-3  text-center">
-        <h1 className="text-3xl ">
-          PARTNER WITH <b className=" font-thin text-5xl">kronotrack</b>{" "}
+        <h1 className="text-4xl font-bold text-[var(--light)] mb-6 leading-tight">
+          Partner With kronotrack
         </h1>
-        <p> We will contact you promptly</p>
+        <p className="text-[0.875rem] font1 text-[var(--light)] font-semibold ">
+          {" "}
+          We will contact you promptly
+        </p>
       </section>
       <section className=" w-3/5 max-md:w-full max-md:px-5 ">
         <form action="https://formsubmit.co/your@email.com" method="POST">
           <input
             type="text"
-            className="w-full my-3 bg-gray-400/80 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="your full name"
+            className="w-full my-3 text-[0.875rem] font-sans text-justify  bg-light px-4 py-2 border text-[var(--dark)]  font-semibold border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purplelt"
+            placeholder="Your full name"
           />
           <input
             type="email"
-            className="w-full bg-gray-400/80 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="your email address"
+            className="w-full my-3 text-[0.875rem] font-sans text-justify  bg-light px-4 py-2 border text-[var(--dark)]  font-semibold border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purplelt"
+            placeholder="Your email address"
           />
-          <button
-            type="submit"
-            className="bg-primary text-white px-5 py-1.5 mt-3 hover:opacity-85 cursor-pointer"
-          >
+
+          <button className="bg-purple text-light mt-3 h-auto px-6 py-2 rounded">
             Send
           </button>
         </form>
