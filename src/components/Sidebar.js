@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import icon from "../assets/adminprofile.png";
+import Link from "next/link";
 
 const Sidebar = ({ className }) => {
   const features = [
@@ -16,7 +17,7 @@ const Sidebar = ({ className }) => {
 
   return (
     <div className={className}>
-      <div className="menu-bg h-screen border-none pt-10 items-center text-black flex flex-col gap-[10px]">
+      <div className="bg-[#D402F9] h-screen w- border-none pt-10 items-center text-black flex flex-col gap-[10px]">
         <div>
           <h1 className="font-bold text-xl">AttendIQ Admin</h1>
         </div>
@@ -44,9 +45,11 @@ const Sidebar = ({ className }) => {
               {feature}
             </li>
           ))}
-          <li className="bg-[#9E0003] text-white p-[10px] rounded-[5px] w-full">
-            Logout
-          </li>
+          <Link href="/login">
+            <li className="bg-[#9E0003] text-white p-[10px] rounded-[5px] w-full">
+              Logout
+            </li>
+          </Link>
         </ul>
       </div>
     </div>
