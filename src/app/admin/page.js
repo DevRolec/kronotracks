@@ -47,12 +47,16 @@ const page = () => {
               <div className="flex justify-between py-4">
                 <h1>Registered User</h1>
                 <div className="flex flex-row gap-5">
-                  <button className="text-white bg-black rounded-md text-sm p-1 border-t border-t-[#d402f9]">
-                    Add Driver
-                  </button>
-                  <button className="text-white bg-black rounded-md text-sm p-1 border-t border-t-[#d402f9]">
-                    Add Clients
-                  </button>
+                  <a href="/driver-signup">
+                    <button className="text-white bg-black rounded-md text-sm p-1 border-t border-t-[#d402f9]">
+                      Add Driver
+                    </button>
+                  </a>
+                  <a href="/client-signup">
+                    <button className="text-white bg-black rounded-md text-sm p-1 border-t border-t-[#d402f9]">
+                      Add Clients
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>

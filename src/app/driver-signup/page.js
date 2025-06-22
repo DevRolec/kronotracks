@@ -1,5 +1,5 @@
-  "use client";
-  import { useState } from "react";
+"use client";
+import { useState } from "react";
 
 import { FaEnvelope, FaUser, FaEye, FaLocationArrow } from "react-icons/fa";
 
@@ -30,13 +30,12 @@ export default function DriverSignup() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
-      <form
-        onSubmit={handleSubmit}
-        className="w-full max-w-md bg-white rounded-xl p-6 shadow-md space-y-4"
-      >
+    <div className="min-h-screen flex items-center justify-center bg-white px-4">
+      <form onSubmit={handleSubmit} className="w-full max-w-md  p-6  space-y-4">
         <div className="text-center">
-          <h2 className="text-purple-600 text-lg font-semibold">Welcome Onboard User!</h2>
+          <h2 className="text-purple-600 text-lg font-semibold">
+            Welcome Onboard User!
+          </h2>
           <p className="text-sm text-gray-500">PLEASE ENTER YOUR DETAILS</p>
         </div>
 
@@ -60,17 +59,17 @@ export default function DriverSignup() {
           <select
             name="role"
             value={formData.role}
-          onChange={handleChange}
-          required
-          className=" border text-gray-600 px-4 py-2 rounded-full"
-        >
-          <option value="">None</option>
-          {roles.map((r) => (
-            <option key={r} value={r}>
-              {r}
-            </option>
-          ))}
-        </select>
+            onChange={handleChange}
+            required
+            className=" border text-gray-600 px-4 py-2 rounded-full"
+          >
+            <option value="">None</option>
+            {roles.map((r) => (
+              <option key={r} value={r}>
+                {r}
+              </option>
+            ))}
+          </select>
         </div>
 
         {/* Fullname */}
@@ -124,7 +123,9 @@ export default function DriverSignup() {
             onChange={handleChange}
             required
           />
-          <span className="text-gray-600">I accept the terms and conditions</span>
+          <span className="text-gray-600">
+            I accept the terms and conditions
+          </span>
         </label>
 
         {/* Submit */}

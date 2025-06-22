@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { FaCalendarAlt } from 'react-icons/fa';
+import { useState } from "react";
+import { FaCalendarAlt } from "react-icons/fa";
 
 export default function CreateTicket() {
   const [formData, setFormData] = useState({
-    receiptNo: 'JKT-DRV-003254',
-    date: '',
-    driverName: '',
-    route: '',
-    amount: '',
-    paymentMethod: 'Cash',
-    agentName: '',
+    receiptNo: "JKT-DRV-003254",
+    date: "",
+    driverName: "",
+    route: "",
+    amount: "",
+    paymentMethod: "Cash",
+    agentName: "",
   });
 
   const [showPreview, setShowPreview] = useState(false);
@@ -23,29 +23,40 @@ export default function CreateTicket() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Ticket Submitted:', formData);
+    console.log("Ticket Submitted:", formData);
     // Submit to backend here
   };
 
   return (
-    <div className="w-full mx-auto p-6 bg-white rounded-lg shadow">
+    <div className="w-full mx-auto p-6 bg-white ">
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <div>
-          <h2 className="text-xl font-semibold">Welcome Ticketer</h2>
+          <h2 className="text-xl font-semibold text-black">Welcome Ticketer</h2>
           <p className="text-sm text-gray-600">Jimoh Damilola</p>
         </div>
         <div className="flex gap-2">
-          <button className="bg-black text-white text-sm px-3 py-1 rounded-full">Profile</button>
-          <button className="bg-red-600 text-white text-sm px-3 py-1 rounded-full">Logout</button>
+          <button className="bg-black text-white text-sm px-3 py-1 rounded-full">
+            Profile
+          </button>
+          <button className="bg-red-600 text-white text-sm px-3 py-1 rounded-full">
+            Logout
+          </button>
         </div>
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-4 mb-6">
-        {["Create Ticket", "Tickets", "Create Ticket", "Create Ticket"].map((tab, idx) => (
-          <button key={idx} className="bg-fuchsia-600 text-white px-4 py-1 md:px-2 rounded text-sm">{tab}</button>
-        ))}
+      <div className="flex gap-4 mb-6 bg-fuchsia-600">
+        {["Create Ticket", "Tickets", "Create Ticket", "Create Ticket"].map(
+          (tab, idx) => (
+            <button
+              key={idx}
+              className="bg-fuchsia-600 text-white px-4 py-1 md:px-2 rounded text-sm"
+            >
+              {tab}
+            </button>
+          )
+        )}
       </div>
 
       {/* Form */}
@@ -70,7 +81,7 @@ export default function CreateTicket() {
 
         <button
           type="button"
-          onClick={() => alert('Scanning ID... (simulated)')}
+          onClick={() => alert("Scanning ID... (simulated)")}
           className="bg-black text-white px-4 py-1 rounded text-sm"
         >
           Scan ID
@@ -146,13 +157,27 @@ export default function CreateTicket() {
           <div className="bg-white rounded-lg shadow-lg p-6 w-[90%] max-w-md">
             <h2 className="text-lg font-bold mb-4">Ticket Preview</h2>
             <div className="space-y-2 text-sm text-gray-700">
-              <p><strong>Receipt No:</strong> {formData.receiptNo}</p>
-              <p><strong>Date:</strong> {formData.date}</p>
-              <p><strong>Driver's Name:</strong> {formData.driverName}</p>
-              <p><strong>Route:</strong> {formData.route}</p>
-              <p><strong>Amount:</strong> ₦{formData.amount}</p>
-              <p><strong>Payment:</strong> {formData.paymentMethod}</p>
-              <p><strong>Agent:</strong> {formData.agentName}</p>
+              <p>
+                <strong>Receipt No:</strong> {formData.receiptNo}
+              </p>
+              <p>
+                <strong>Date:</strong> {formData.date}
+              </p>
+              <p>
+                <strong>Driver's Name:</strong> {formData.driverName}
+              </p>
+              <p>
+                <strong>Route:</strong> {formData.route}
+              </p>
+              <p>
+                <strong>Amount:</strong> ₦{formData.amount}
+              </p>
+              <p>
+                <strong>Payment:</strong> {formData.paymentMethod}
+              </p>
+              <p>
+                <strong>Agent:</strong> {formData.agentName}
+              </p>
             </div>
             <div className="flex justify-end gap-4 mt-6">
               <button
@@ -161,9 +186,7 @@ export default function CreateTicket() {
               >
                 Close
               </button>
-              <button
-                className="text-sm bg-purple-700 text-white px-4 py-2 rounded"
-              >
+              <button className="text-sm bg-purple-700 text-white px-4 py-2 rounded">
                 Confirm & Print
               </button>
             </div>
